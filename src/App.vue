@@ -15,20 +15,10 @@
 
           </v-layout>
           <v-layout align-center justify-space-around>
-            <v-btn flat icon href='https://github.com/Jugbot' target="_blank">
-              <v-icon>fab fa-github</v-icon>
-            </v-btn>
-            <v-btn flat icon href='https://www.linkedin.com/in/lucas-pollice/' target="_blank">
-              <v-icon>fab fa-linkedin</v-icon>
-            </v-btn>
-            <v-btn flat icon href='https://www.reddit.com/user/Jugbot' target="_blank">
-              <v-icon>fab fa-reddit</v-icon>
-            </v-btn>
-            <v-btn flat icon href='https://www.deviantart.com/jugbotery' target="_blank">
-              <v-icon>fab fa-deviantart</v-icon>
-            </v-btn>
-            <v-btn flat icon href='https://discordapp.com/users/214328380189966337' target="_blank">
-              <v-icon>fab fa-discord</v-icon>
+            <v-btn flat icon
+            v-for='link in links' :key='link.icon'
+            :href='link.url' target="_blank">
+              <v-icon>fab fa-{{link.icon}}</v-icon>
             </v-btn>
             <v-btn icon flat href='https://github.com/Jugbot/jugbot.github.io' target="_blank">
               <div class="title font-weight-black">
@@ -66,8 +56,8 @@
       justify-center
       row>
         <v-btn flat @click='dark = !dark'>
-          <span v-if='!dark'>Vampire-accessible site</span>
-          <span v-else>Eyeball-searing site</span>
+          <span class='grey--text' v-if='!dark'>Vampire-accessible site</span>
+          <span class='grey--text' v-else>Eyeball-searing site</span>
         </v-btn>
       </v-layout>
     </v-footer>
@@ -82,17 +72,42 @@ export default {
   data () {
     return {
       dark: false,
-      title: 'Your Logo',
-      posts: [
+      links: [
         {
-          title: 'Fusce ullamcorper tellus',
-          content: 'Fusce ullamcorper tellus sed maximus rutrum. Donec imperdiet ultrices maximus. Donec non tellus non neque pellentesque fermentum. Aenean in pellentesque urna.',
-          imgUrl: 'https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/cards/drop.jpg'
+          icon: 'github',
+          url: 'https://github.com/Jugbot'
         },
         {
-          title: 'Donec vitae suscipit lectus, a luctus diam.',
-          content: 'Donec vitae suscipit lectus, a luctus diam. Proin vitae felis gravida, lobortis massa sit amet, efficitur erat. Morbi vel ultrices nisi.',
-          imgUrl: 'https://raw.githubusercontent.com/vuetifyjs/docs/dev/static/doc-images/cards/docks.jpg'
+          icon: 'linkedin',
+          url: 'https://www.linkedin.com/in/lucas-pollice/'
+        },
+        {
+          icon: 'reddit',
+          url: 'https://www.reddit.com/user/Jugbot'
+        },
+        {
+          icon: 'deviantart',
+          url: 'https://www.deviantart.com/jugbotery'
+        },
+        {
+          icon: 'discord',
+          url: 'https://discordapp.com/users/214328380189966337'
+        }
+      ],
+      docs: [
+        {
+          name: 'Experience.html',
+          content:
+`&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;
+  &lt;head&gt;
+    &lt;title&gt;Resume&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;experience&gt;&lt;/experience&gt;
+    &lt;languages&gt;&lt;/languages&gt;
+  &lt;/body&gt;
+&lt;/html&gt;`
         }
       ]
     }
