@@ -4,15 +4,16 @@
       <v-layout row wrap align-center fill-height>
         <v-flex xs12 md5 lg4>
           <v-layout justify-space-between align-center>
-              <v-avatar size="125px">
+          <v-flex>
+              <v-avatar size="125px" class='mr-3'>
                 <img
-                  class="img-circle elevation-1 mr-2"
-                  src="https://avatars1.githubusercontent.com/u/5402388?s=400&u=5e2559cade2222895d7f1c096d2d7654127fcfd7&v=4"
-                >
+                  class="img-circle elevation-1"
+                  src="https://avatars1.githubusercontent.com/u/5402388?s=400&u=5e2559cade2222895d7f1c096d2d7654127fcfd7&v=4">
               </v-avatar>
-
+            </v-flex>
+            <v-flex>
               <div class="font-weight-light display-3">LUCAS POLLICE</div>
-
+            </v-flex>
           </v-layout>
           <v-layout align-center justify-space-around>
             <v-btn flat icon
@@ -27,31 +28,13 @@
             </v-btn>
           </v-layout>
         </v-flex>
-        <v-flex xs12 md5 offset-md2 lg6>
-          <div v-for="post in posts" :key="post.title">
-            <v-card class="my-3" hover>
-              <v-card-media
-                class="white--text"
-                height="170px"
-                :src="post.imgUrl"
-              >
-                <v-container fill-height fluid>
-                  <v-layout>
-                    <v-flex xs12 align-end d-flex>
-                      <span class="headline">{{ post.title }}</span>
-                    </v-flex>
-                  </v-layout>
-                </v-container>
-              </v-card-media>
-              <v-card-text>
-                {{ post.content }}
-              </v-card-text>
-            </v-card>
-          </div>
+        <v-flex xs12 md6 offset-md1 lg7>
+          <FakeIDE></FakeIDE>
         </v-flex>
       </v-layout>
     </v-container>
-    <v-footer color='#00000000'>
+    <v-footer color='#00000000'
+      fixed>
       <v-layout
       justify-center
       row>
@@ -64,14 +47,18 @@
   </v-app>
 </template>
 
+
 <script>
+import FakeIDE from './components/FakeIDE.vue'
+
 export default {
   name: 'App',
   components: {
+      FakeIDE
   },
   data () {
     return {
-      dark: false,
+      dark: true,
       links: [
         {
           icon: 'github',
@@ -92,22 +79,6 @@ export default {
         {
           icon: 'discord',
           url: 'https://discordapp.com/users/214328380189966337'
-        }
-      ],
-      docs: [
-        {
-          name: 'Experience.html',
-          content:
-`&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;
-  &lt;head&gt;
-    &lt;title&gt;Resume&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;experience&gt;&lt;/experience&gt;
-    &lt;languages&gt;&lt;/languages&gt;
-  &lt;/body&gt;
-&lt;/html&gt;`
         }
       ]
     }
