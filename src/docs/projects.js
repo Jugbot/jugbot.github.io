@@ -11,14 +11,16 @@ const content =
       duration: 'January 2018',
       description: \`Tank shooter game.
           Home-brewed hit detection and quad-tree optimization.
-          Generated maze maps.\`
+          Includes randomly generated maze maps.\`
     },
     'Funkey-Keyboard': {
       duration: 'HackNYU 2018',
       description: \`Physical piano rythme game trainer.
           Extensive Raspberry Pi, EE, CAD Work.
           Worked with others on game logic.\`,
-      awards: 'NYU Nick-Russo (entrepreneurial award)'
+      awards() {
+        return 'NYU Nick-Russo (entrepreneurial award)';
+      }
     }
   }
 })()

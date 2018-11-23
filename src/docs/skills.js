@@ -22,7 +22,7 @@ div[lang="C++"] {
 }
 #art > .doodle. {
   platform: 'digital';
-  type: 'line'
+  type: 'line';
 }
 `
 

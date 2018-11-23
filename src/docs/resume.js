@@ -11,7 +11,7 @@ const content =
         maintaing webpages for testing UI demand curves.
     </p>
     <span><b> Intern:</b> Binger Data Management, LLC </span>
-    <p> Intern Binger Data Management creating UX forms and
+    <p> Created UX forms and performed
         other miscellaneous tasks such as spreadsheet
         manipulation and data scalping.
     </p>
