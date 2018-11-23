@@ -8,7 +8,7 @@
               <v-avatar size="125px" class='mr-3'>
                 <img
                   class="img-circle elevation-1"
-                  src="https://avatars1.githubusercontent.com/u/5402388?s=400&u=5e2559cade2222895d7f1c096d2d7654127fcfd7&v=4">
+                  src="./assets/avatar.jpg">
               </v-avatar>
             </v-flex>
             <v-flex>
