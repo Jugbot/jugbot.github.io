@@ -2,7 +2,7 @@
   <v-app :dark='dark'>
     <v-container full-height>
       <v-layout row wrap align-center fill-height>
-        <v-flex xs12 md5 lg4>
+        <v-flex xs12 lg4>
           <v-layout justify-space-between align-center>
           <v-flex>
               <v-avatar size="125px" class='mr-3'>
@@ -28,8 +28,8 @@
             </v-btn>
           </v-layout>
         </v-flex>
-        <v-flex xs12 md6 offset-md1 lg7>
-          <FakeIDE></FakeIDE>
+        <v-flex xs12 lg8>
+          <FakeIDE :height='600'></FakeIDE>
         </v-flex>
       </v-layout>
     </v-container>
@@ -39,8 +39,8 @@
       justify-center
       row>
         <v-btn flat @click='dark = !dark'>
-          <span class='grey--text' v-if='!dark'>Vampire-accessible site</span>
-          <span class='grey--text' v-else>Eyeball-searing site</span>
+          <span class='grey--text' v-if='!dark'>Vampire-accessible theme</span>
+          <span class='grey--text' v-else>Eyeball-searing theme</span>
         </v-btn>
       </v-layout>
     </v-footer>
