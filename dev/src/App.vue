@@ -16,12 +16,12 @@
             </v-flex>
           </v-layout>
           <v-layout align-center justify-space-around>
-            <v-btn flat icon
+            <v-btn text icon
             v-for='link in links' :key='link.icon'
             :href='link.url' target="_blank">
               <v-icon>fab fa-{{link.icon}}</v-icon>
             </v-btn>
-            <v-btn icon flat href='https://github.com/Jugbot/jugbot.github.io' target="_blank">
+            <v-btn icon text href='https://github.com/Jugbot/jugbot.github.io' target="_blank">
               <div class="title font-weight-black">
                 &lt;/&gt;
               </div>
@@ -38,7 +38,7 @@
       <v-layout
       justify-center
       row>
-        <v-btn flat @click='dark = !dark'>
+        <v-btn text @click='dark = !dark'>
           <span class='grey--text' v-if='!dark'>Vampire-accessible theme</span>
           <span class='grey--text' v-else>Eyeball-searing theme</span>
         </v-btn>
