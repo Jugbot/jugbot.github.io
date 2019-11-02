@@ -31,6 +31,10 @@ module.exports = {
         multiline: 6
       }
     ],
+    "vue/html-closing-bracket-newline": ["error", {
+      "singleline": "never",
+      "multiline": "never"
+    }],
     'vue/component-name-in-template-casing': 'error',
     'vue/require-direct-export': 'warning'
   },

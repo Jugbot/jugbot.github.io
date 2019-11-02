@@ -4,8 +4,7 @@
       <v-tabs :value="2">
         <v-tab-item
           v-for="doc in docs"
-          :key="doc.filePath"
-        >
+          :key="doc.filePath">
           <v-card flat tile style="overflow-y: auto; overflow-x: hidden" :height="height">
             <v-card-text>
               <pre style="white-space: pre-wrap;" v-html="doc.content">
@@ -16,24 +15,25 @@
         </v-tab-item>
         <v-tab-item>
           <v-card flat tile style="overflow: hidden" :height="height">
-            <iframe width="100%" height="100%" style="border:none" src="https://jugbot.github.io/resume/" />
+            <v-btn color="primary" small absolute top right @click="$refs.resume.contentWindow.print()">
+              Print
+            </v-btn>
+            <iframe ref="resume" width="100%" height="100%" style="border:none" src="https://jugbot.github.io/resume/" />
           </v-card>
         </v-tab-item>
         <v-tab
           v-for="doc in docs"
-          :key="doc.filePath"
-        >
+          :key="doc.filePath">
           {{ doc.filePath }}
         </v-tab>
         <v-spacer />
         <v-tab>
-          <v-icon size="small" class="px-2" color="light-green">
+          <v-icon size="small" class="px-2">
             fas fa-play
           </v-icon>
           run
         </v-tab>
       </v-tabs>
-      
     </v-card>
   </v-container>
 </template>
@@ -76,7 +76,6 @@ export default {
   mounted() {
     for (let doc of this.docs) {
       fetch('https://jugbot.github.io/resume/' + doc.filePath).then(response => response.text().then((raw) => {
-        console.log(hljs.highlight(doc.type, raw))
         doc.content = hljs.highlight(doc.type, raw).value
       }))
     }
