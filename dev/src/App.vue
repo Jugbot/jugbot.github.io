@@ -86,6 +86,10 @@ export default {
           url: 'https://www.deviantart.com/jugbotery'
         },
         {
+          icon: 'instagram',
+          url: 'https://www.instagram.com/jugbot/'
+        },
+        {
           icon: 'discord',
           url: 'https://discordapp.com/users/214328380189966337'
         }
