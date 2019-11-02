@@ -1,37 +1,40 @@
 <template lang="html">
   <v-container fluid>
-    <v-tabs :value="2">
-      <v-tab-item
-        v-for="doc in docs"
-        :key="doc.filePath"
-      >
-        <v-card flat tile style="overflow-y: auto; overflow-x: hidden" :height="height">
-          <v-card-text>
-            <pre style="white-space: pre-wrap;" v-html="doc.content">
-              <!-- injected content highlight.js -->
-            </pre>
-          </v-card-text>
-        </v-card>
-      </v-tab-item>
-      <v-tab-item>
-        <v-card flat tile style="overflow: hidden" :height="height">
-          <iframe width="100%" height="100%" style="border:none" src="https://jugbot.github.io/resume/" />
-        </v-card>
-      </v-tab-item>
-      <v-tab
-        v-for="doc in docs"
-        :key="doc.filePath"
-      >
-        {{ doc.filePath }}
-      </v-tab>
-      <v-spacer />
-      <v-tab>
-        <v-icon size="small" class="px-2" color="light-green">
-          fas fa-play
-        </v-icon>
-        run
-      </v-tab>
-    </v-tabs>
+    <v-card>
+      <v-tabs :value="2">
+        <v-tab-item
+          v-for="doc in docs"
+          :key="doc.filePath"
+        >
+          <v-card flat tile style="overflow-y: auto; overflow-x: hidden" :height="height">
+            <v-card-text>
+              <pre style="white-space: pre-wrap;" v-html="doc.content">
+                <!-- injected content highlight.js -->
+              </pre>
+            </v-card-text>
+          </v-card>
+        </v-tab-item>
+        <v-tab-item>
+          <v-card flat tile style="overflow: hidden" :height="height">
+            <iframe width="100%" height="100%" style="border:none" src="https://jugbot.github.io/resume/" />
+          </v-card>
+        </v-tab-item>
+        <v-tab
+          v-for="doc in docs"
+          :key="doc.filePath"
+        >
+          {{ doc.filePath }}
+        </v-tab>
+        <v-spacer />
+        <v-tab>
+          <v-icon size="small" class="px-2" color="light-green">
+            fas fa-play
+          </v-icon>
+          run
+        </v-tab>
+      </v-tabs>
+      
+    </v-card>
   </v-container>
 </template>
 
