@@ -5,7 +5,7 @@
         v-for="doc in docs"
         :key="doc.filePath"
       >
-        <v-card flat style="overflow-y: auto; overflow-x: hidden" :height="height">
+        <v-card flat tile style="overflow-y: auto; overflow-x: hidden" :height="height">
           <v-card-text>
             <pre style="white-space: pre-wrap;" v-html="doc.content">
               <!-- injected content highlight.js -->
@@ -14,8 +14,8 @@
         </v-card>
       </v-tab-item>
       <v-tab-item>
-        <v-card flat style="overflow: hidden" :height="height">
-          <iframe width="100%" height="100%" style="border:none" src="https://jugbot.github.io/resume/" />>
+        <v-card flat tile style="overflow: hidden" :height="height">
+          <iframe width="100%" height="100%" style="border:none" src="https://jugbot.github.io/resume/" />
         </v-card>
       </v-tab-item>
       <v-tab

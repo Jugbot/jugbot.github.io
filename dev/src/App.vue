@@ -9,7 +9,7 @@
                 <v-avatar size="125px" class="mr-3 mb-3">
                   <img
                     class="img-circle elevation-1"
-                    src="./assets/avatar.jpg"
+                    src="https://github.com/Jugbot.png?size=125"
                   >
                 </v-avatar>
               </v-flex>
