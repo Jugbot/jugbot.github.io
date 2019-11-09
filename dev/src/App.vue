@@ -18,7 +18,7 @@
                 </div>
               </v-flex>
             </v-row>
-            <v-row v-else no-gutters justify="center">
+            <v-row v-else no-gutters align="baseline">
               <v-flex shrink>
                 <v-avatar size="64px" class="mr-3 mb-3">
                   <img
@@ -27,7 +27,7 @@
                 </v-avatar>
               </v-flex>
               <v-flex shrink>
-                <div class="font-weight-light display-3">
+                <div class="font-weight-light display-1">
                   LUCAS POLLICE
                 </div>
               </v-flex>
