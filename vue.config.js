@@ -3,6 +3,5 @@ module.exports = {
     "vuetify"
   ],
 
-  outputDir: '../',
   lintOnSave: false
 }
