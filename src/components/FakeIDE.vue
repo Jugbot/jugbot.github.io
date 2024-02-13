@@ -7,9 +7,7 @@
           :key="doc.filePath">
           <v-card flat tile style="overflow-y: auto; overflow-x: hidden" :height="height">
             <v-card-text>
-              <pre style="white-space: pre-wrap;" v-html="doc.content">
-                <!-- injected content highlight.js -->
-              </pre>
+              <pre style="white-space: pre-wrap;" v-html="doc.content" />
             </v-card-text>
           </v-card>
         </v-tab-item>
@@ -39,8 +37,8 @@
 </template>
 
 <script>
-import hljs from 'highlight.js/lib/highlight';
-import 'highlight.js/styles/atom-one-dark.css'
+import hljs from 'highlight.js';
+import 'highlight.js/styles/atom-one-dark.min.css'
 
 import html from 'highlight.js/lib/languages/xml';
 hljs.registerLanguage('html', html);

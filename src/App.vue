@@ -13,7 +13,7 @@
                 </v-avatar>
               </v-flex>
               <v-flex shrink>
-                <div class="font-weight-light display-3">
+                <div class="font-weight-light text-h2">
                   LUCAS<br>POLLICE
                 </div>
               </v-flex>
@@ -27,7 +27,7 @@
                 </v-avatar>
               </v-flex>
               <v-flex shrink>
-                <div class="font-weight-light display-1">
+                <div class="font-weight-light text-h4">
                   LUCAS POLLICE
                 </div>
               </v-flex>
@@ -40,7 +40,7 @@
                 <v-icon>fab fa-{{ link.icon }}</v-icon>
               </v-btn>
               <v-btn icon text href="https://github.com/Jugbot/jugbot.github.io" target="_blank">
-                <div class="title font-weight-black">
+                <div class="text-h6 font-weight-black">
                   &lt;/&gt; 
                 </div>
               </v-btn>
@@ -54,15 +54,12 @@
     </v-content>
     <v-footer 
       app
-      absolute
-      color="transparent">
-      <v-row
-        justify="center">
-        <v-btn text @click="$vuetify.theme.dark = !$vuetify.theme.dark">
-          <span v-if="!$vuetify.theme.dark" class="grey--text">Vampire-accessible theme</span>
-          <span v-else class="grey--text">Eyeball-searing theme</span>
-        </v-btn>
-      </v-row>
+      color="transparent"
+      class="justify-center">
+      <v-btn text @click="$vuetify.theme.dark = !$vuetify.theme.dark">
+        <span v-if="!$vuetify.theme.dark" class="grey--text">Vampire-accessible theme</span>
+        <span v-else class="grey--text">Eyeball-searing theme</span>
+      </v-btn>
     </v-footer>
   </v-app>
 </template>
@@ -74,7 +71,7 @@ import FakeIDE from './components/FakeIDE.vue'
 export default {
   name: 'App',
   components: {
-      FakeIDE
+    FakeIDE
   },
   data () {
     return {

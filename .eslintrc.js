@@ -36,10 +36,10 @@ module.exports = {
       "multiline": "never"
     }],
     'vue/component-name-in-template-casing': 'error',
-    'vue/require-direct-export': 'warning'
+    'vue/require-direct-export': 'warn'
   },
 
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: '@babel/eslint-parser'
   },
 }
