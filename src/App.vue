@@ -86,22 +86,6 @@ export default {
         {
           icon: 'linkedin',
           url: 'https://www.linkedin.com/in/lucas-pollice/'
-        },
-        {
-          icon: 'reddit',
-          url: 'https://www.reddit.com/user/Jugbot'
-        },
-        {
-          icon: 'deviantart',
-          url: 'https://www.deviantart.com/jugbotery'
-        },
-        {
-          icon: 'instagram',
-          url: 'https://www.instagram.com/jugbot/'
-        },
-        {
-          icon: 'discord',
-          url: 'https://discordapp.com/users/214328380189966337'
         }
       ]
     }
