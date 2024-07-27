@@ -1,5 +1,4 @@
 <template lang="html">
-  <v-container fluid>
     <v-card>
       <v-tabs v-model="tab">
         <v-tab v-for="(doc, i) in docs" :key="doc.filePath" :value="i">
@@ -41,7 +40,6 @@
         </v-tabs-window-item>
       </v-tabs-window>
     </v-card>
-  </v-container>
 </template>
 
 <script lang="ts">
