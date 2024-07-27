@@ -6,8 +6,7 @@
           {{ doc.filePath }}
         </v-tab>
         <v-spacer />
-        <v-tab :value="-1">
-          <v-icon size="small" class="px-2"> fas fa-play </v-icon>
+        <v-tab :value="-1" prepend-icon="mdi-play">
           run
         </v-tab>
       </v-tabs>
