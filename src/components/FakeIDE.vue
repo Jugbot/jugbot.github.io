@@ -1,45 +1,43 @@
 <template lang="html">
-    <v-card>
-      <v-tabs v-model="tab">
-        <v-tab v-for="(doc, i) in docs" :key="doc.filePath" :value="i">
-          {{ doc.filePath }}
-        </v-tab>
-        <v-spacer />
-        <v-tab :value="-1" prepend-icon="mdi-play">
-          run
-        </v-tab>
-      </v-tabs>
-      <v-tabs-window v-model="tab">
-        <v-tabs-window-item v-for="(doc, i) in docs" :key="doc.filePath" :value="i">
-          <v-card flat tile style="overflow-y: auto; overflow-x: hidden" :height="height">
-            <v-card-text>
-              <pre style="white-space: pre-wrap" v-html="doc.content" />
-            </v-card-text>
-          </v-card>
-        </v-tabs-window-item>
-        <v-tabs-window-item :value="-1">
-          <v-card flat tile style="overflow: hidden" :height="height">
-            <v-btn
-              color="primary"
-              size="small"
-              position="absolute"
-              location="top right"
-              class="ma-4"
-              @click="($refs.resume as any).contentWindow.print()"
-            >
-              Print
-            </v-btn>
-            <iframe
-              ref="resume"
-              width="100%"
-              height="100%"
-              style="border: none"
-              src="https://jugbot.github.io/resume/"
-            />
-          </v-card>
-        </v-tabs-window-item>
-      </v-tabs-window>
-    </v-card>
+  <v-card border flat>
+    <v-tabs v-model="tab">
+      <v-tab v-for="(doc, i) in docs" :key="doc.filePath" :value="i">
+        {{ doc.filePath }}
+      </v-tab>
+      <v-spacer />
+      <v-tab :value="-1" prepend-icon="mdi-play"> run </v-tab>
+    </v-tabs>
+    <v-tabs-window v-model="tab">
+      <v-tabs-window-item v-for="(doc, i) in docs" :key="doc.filePath" :value="i">
+        <v-card flat tile style="overflow-y: auto; overflow-x: hidden" :height="height">
+          <v-card-text>
+            <pre style="white-space: pre-wrap" v-html="doc.content" />
+          </v-card-text>
+        </v-card>
+      </v-tabs-window-item>
+      <v-tabs-window-item :value="-1">
+        <v-card flat tile style="overflow: hidden" :height="height">
+          <v-btn
+            color="primary"
+            size="small"
+            position="absolute"
+            location="top right"
+            class="ma-4"
+            @click="($refs.resume as any).contentWindow.print()"
+          >
+            Print
+          </v-btn>
+          <iframe
+            ref="resume"
+            width="100%"
+            height="100%"
+            style="border: none"
+            src="https://jugbot.github.io/resume/"
+          />
+        </v-card>
+      </v-tabs-window-item>
+    </v-tabs-window>
+  </v-card>
 </template>
 
 <script lang="ts">

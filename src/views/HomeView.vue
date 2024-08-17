@@ -28,11 +28,16 @@ const links = [
           <v-avatar size="125px" class="mr-3 my-0">
             <img class="img-circle elevation-1" src="https://github.com/Jugbot.png?size=125" />
           </v-avatar>
-          <v-col style="align-content: center;">
+          <v-col style="align-content: center">
             <v-row class="font-weight-light text-h3 ma-0 mx-4 mb-2">LUCAS POLLICE</v-row>
             <v-row align="center" class="ma-0 mx-4">
-              <v-btn-group  variant="flat" density="default">
-                <v-tooltip :text="link.label" v-for="link in links" :key="link.icon" location="bottom">
+              <v-btn-group variant="flat" density="default">
+                <v-tooltip
+                  :text="link.label"
+                  v-for="link in links"
+                  :key="link.icon"
+                  location="bottom"
+                >
                   <template v-slot:activator="{ props }">
                     <v-btn v-bind="props" :href="link.url" target="_blank" :icon="link.icon">
                     </v-btn>
@@ -46,11 +51,16 @@ const links = [
           <v-avatar size="80px" class="mr-3 my-0">
             <img class="img-circle elevation-1" src="https://github.com/Jugbot.png?size=80" />
           </v-avatar>
-          <v-col style="align-content: center;">
+          <v-col style="align-content: center">
             <v-row class="font-weight-light text-h4 ma-0 mx-4 mb-2">LUCAS POLLICE</v-row>
             <v-row align="center" class="ma-0 mx-4">
-              <v-btn-group  variant="flat" density="comfortable">
-                <v-tooltip :text="link.label" v-for="link in links" :key="link.icon" location="bottom">
+              <v-btn-group variant="flat" density="comfortable">
+                <v-tooltip
+                  :text="link.label"
+                  v-for="link in links"
+                  :key="link.icon"
+                  location="bottom"
+                >
                   <template v-slot:activator="{ props }">
                     <v-btn v-bind="props" :href="link.url" target="_blank" :icon="link.icon">
                     </v-btn>

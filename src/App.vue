@@ -1,27 +1,22 @@
 <template>
   <v-app>
-    <v-app-bar justify="centered" density="compact" flat color="transparent">
-      <!-- <template v-slot:title>
-        <v-app-bar-title>Application Bar</v-app-bar-title>
-      </template> -->
-      
+    <v-app-bar justify="centered" density="compact" flat color="transparent" sticky>
       <template v-slot:extension>
-        <v-spacer/>
-        <v-card class="ma-3">
-          <v-tabs mobile-breakpoint="xs"
-          >
+        <v-spacer />
+        <v-card class="ma-3" flat border>
+          <v-tabs mobile-breakpoint="xs" bg-color="surface">
             <v-tab to="/">Home</v-tab>
             <v-tab disabled to="/portfolio">Portfolio</v-tab>
-            <v-tab disabled to="/blog">Blog</v-tab>
+            <v-tab to="/blog">Blog</v-tab>
           </v-tabs>
         </v-card>
-        <v-spacer/>
+        <v-spacer />
       </template>
     </v-app-bar>
     <v-main>
       <router-view />
     </v-main>
-    <v-footer app color="transparent" class="justify-center">
+    <v-footer app color="transparent" class="justify-center" absolute>
       <v-btn variant="text" @click="toggleTheme">
         <span v-if="!$vuetify.theme.current.dark" class="text-grey">Vampire-accessible theme</span>
         <span v-else class="text-grey">Eyeball-searing theme</span>
