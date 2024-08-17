@@ -1,5 +1,23 @@
 <template>
   <v-app>
+    <v-app-bar justify="centered" density="compact" flat color="transparent">
+      <!-- <template v-slot:title>
+        <v-app-bar-title>Application Bar</v-app-bar-title>
+      </template> -->
+      
+      <template v-slot:extension>
+        <v-spacer/>
+        <v-card class="ma-3">
+          <v-tabs mobile-breakpoint="xs"
+          >
+            <v-tab to="/">Home</v-tab>
+            <v-tab disabled to="/portfolio">Portfolio</v-tab>
+            <v-tab disabled to="/blog">Blog</v-tab>
+          </v-tabs>
+        </v-card>
+        <v-spacer/>
+      </template>
+    </v-app-bar>
     <v-main>
       <router-view />
     </v-main>
