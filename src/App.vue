@@ -7,7 +7,7 @@
           <v-tabs mobile-breakpoint="xs" bg-color="surface">
             <v-tab to="/">Home</v-tab>
             <v-tab disabled to="/portfolio">Portfolio</v-tab>
-            <v-tab to="/blog">Blog</v-tab>
+            <v-tab disabled to="/blog">Blog</v-tab>
           </v-tabs>
         </v-card>
         <v-spacer />
